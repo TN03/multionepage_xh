@@ -1,0 +1,48 @@
+/*
+ * Front-end.
+ */
+
+.onepage_page {}
+
+#onepage_toplink {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1;
+    display: none;
+}
+#onepage_toplink img {
+    border: none;
+}
+.onepage_hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s;
+}
+.onepage_hide_immediate {
+    visibility: hidden;
+}
+.onepage_show {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 1s, opacity 1s;
+}
+.onepage_show_immediate {
+    visibility: visible;
+}
+
+/*
+ * Back-end.
+ */
+
+.multionepage_editlink {
+}
+.multionepage_logo {
+    float: left;
+    width: 128px;
+    height: 128px;
+    margin: 0.5em 1em 0 0;
+}
+.multionepage_justify {
+    text-align: justify;
+}
