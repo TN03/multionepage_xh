@@ -67,7 +67,7 @@ Das Aussehen von Multionepage\_XH kann unter "Stylesheet" angepasst werden.
 
 "Multionepage" Websites benötigen ein besonderes Template, bei dem einige der
 normalen CMSimple\_XH Template-Tags durch Alternativen ersetzt sind, die
-Onepage\_XH zur Verfügung stellt.
+Multionepage\_XH zur Verfügung stellt.
 
 #### `Multionepage_toc()`
 
