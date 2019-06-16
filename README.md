@@ -108,7 +108,7 @@ Mehrere Template-Tags werden für "Onepage" Templates nicht unterstützt:
 In der Hoffnung, dass Templates einfach angepasst werden können, verwendet
 Multionepage\_XH die selben CSS-Klassen für die Naviagtionsmenues
 und die selbe Struktur für die ausgegebenen Inhalte, wie das Originale
-[Onepage-Plugin](https://github.com/cmb69/onepage_xh)
+[Onepage\_XH-Plugin](https://github.com/cmb69/onepage_xh).
 
 #### Edit-Link
 
