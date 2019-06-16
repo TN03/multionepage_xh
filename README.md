@@ -4,7 +4,7 @@ Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
 erstellen und zu Administrieren. Im Backend können Sie die Site wie
 gewohnt administrieren, aber im Frontend wird ein besonderes Template
 verwendet, das alle sichtbaren Seiten unterhalb einer Level-1-Seite auf einmal 
-zeigt, und das Menü verlinkt zu automatisch eingefügten Ankern auf der 
+zeigt. Das Navigationsmenü verlinkt zu automatisch eingefügten Ankern auf der 
 selben Seite. Durch anlegen mehrerer Level-1-Seiten mit Unterseiten lassen
 sich in einer Site mehrere "Onepager" realisieren.
 
