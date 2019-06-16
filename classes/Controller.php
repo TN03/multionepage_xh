@@ -67,11 +67,11 @@ class Controller {
         if (XH_ADM && $pcf['url_numeric']) {
             $config['urls'] = array_flip($u);
         }
-        $file = $pth['folder']['plugins'] . 'multionepage/onepage.js';
-        if (is_readable($pth['folder']['template'] . 'onepage.min.js')) {
-            $file = $pth['folder']['template'] . 'onepage.min.js';
-        } elseif (is_readable($pth['folder']['template'] . 'onepage.js')) {
-            $file = $pth['folder']['template'] . 'onepage.js';
+        $file = $pth['folder']['plugins'] . 'multionepage/multionepage.js';
+        if (is_readable($pth['folder']['template'] . 'multionepage.min.js')) {
+            $file = $pth['folder']['template'] . 'multionepage.min.js';
+        } elseif (is_readable($pth['folder']['template'] . 'multionepage.js')) {
+            $file = $pth['folder']['template'] . 'multionepage.js';
         }
         include_once($pth['folder']['plugins'] . 'jquery/jquery.inc.php');
         include_jQuery();
