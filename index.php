@@ -92,7 +92,7 @@ function Multionepage_content() {
  * @param string $id
  * @return string
  */
-function Onepage_toplink($id = '') {
+function Multionepage_toplink($id = '') {
     return Multionepage\Controller::renderTopLink($id);
 }
 
