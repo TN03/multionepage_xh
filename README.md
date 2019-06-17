@@ -39,7 +39,7 @@ finden Sie weitere Details.
 
 1.  Sichern Sie die Daten auf Ihrem Server.
 2.  Entpacken Sie die ZIP-Datei auf Ihrem Rechner.
-3.  Laden Sie das ganze Verzeichnis onepage/ auf Ihren Server in
+3.  Laden Sie das ganze Verzeichnis multionepage/ auf Ihren Server in
     CMSimple\_XHs Plugin-Verzeichnis hoch.
 4.  Machen Sie die Unterverzeichnisse config/, css/ und languages/
     beschreibbar.
