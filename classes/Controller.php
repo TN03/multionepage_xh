@@ -227,7 +227,7 @@ class Controller {
                 }
                 $contents .= sprintf(
                         '<div id="%s" class="onepage_page %s">%s</div>', $url,
-                        $pageData['onepage_class'],
+                        $pageData['multionepage_class'],
                         sprintf(
                                 '<div class="%s">%s</div>',
                                 $plugin_cf['multionepage']['inner_class'],
