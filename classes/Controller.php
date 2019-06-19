@@ -149,18 +149,18 @@ class Controller {
     }
 
     /**
+     * @param int
      * @return int
      */
-    public static function getRoot() {
-        global $l, $s;
+    public static function getRoot($i) {
+        global $l;
 
-        $x = $s;
-        if (isset($l[$x]) && $l[$x] > 1) {
-            while ($l[$x] > 1) {
-                $x --;
+        if (isset($l[$i]) && $l[$i] > 1) {
+            while ($l[$i] > 1) {
+                $i --;
             }
         }
-        return $x;
+        return $i;
     }
 
     /**
