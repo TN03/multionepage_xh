@@ -196,7 +196,7 @@ class Controller {
 
         if ($plugin_cf['multionepage']['show_editlink']) {
             return '<div class="multionepage_editlink">'
-                    . '<a title="'. $tx['editmenu']['edit'] . '" '
+                    . '<a title="' . $tx['editmenu']['edit'] . '" '
                     . 'href="' . $sn . '?' . $u[$pageindex] . '&amp;edit">'
                     . '<span class="fa fa-pencil-square-o"></span></a>'
                     . '</div>' . PHP_EOL;
