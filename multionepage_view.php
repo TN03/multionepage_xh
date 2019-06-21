@@ -26,6 +26,7 @@ function Multionepage_view($pageData)
 
     $action = XH_hsc("$sn?$su");
     $class = XH_hsc($pageData['multionepage_class']);
+    $checkedAttr = $pageData['multionepage_access'] ? ' checked="checked"' : '';
     return <<<HTML
 <form id="multionepage" action="$action" method="post">
     <p>
@@ -34,6 +35,13 @@ function Multionepage_view($pageData)
         <label>
             <span>{$plugin_tx['multionepage']['tab_class']}</span>
             <input type="text" name="multionepage_class" value="$class">
+        </label>
+    </p>
+    <p>
+        <label>
+            <span>{$plugin_tx['multionepage']['tab_access']}</span>
+            <input type="hidden" name="multionepage_access" value="0">
+            <input type="checkbox" name="multionepage_access" value="1" {$checkedAttr}>
         </label>
     </p>
     <p>

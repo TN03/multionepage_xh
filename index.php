@@ -81,11 +81,28 @@ function Onepage_content() {
 */
 
 /**
- * @return string
+ * @return mixed
  */
 function Multionepage_content() {
-    $pages = Multionepage\Controller::getSubPages();
-    return Multionepage\Controller::getContent($pages);
+    global $edit, $l, $u, $s, $sn, $pd_router;
+
+    if ($s > -1 && $l[$s] > 1 && (!XH_ADM || (XH_ADM && !$edit))) {
+        $pageData = $pd_router->find_page($s);
+        if ($pageData['multionepage_access']) {
+            return Multionepage\Controller::getContent(array($s));
+        }
+        $t = Multionepage\Controller::getRoot($s);
+        if (hide($t)) {
+            return shead(404);
+        } else {
+            $path = $sn . '?' . $u[$t];
+            header("Location: $path", true, 301);
+            exit;
+        }
+    } else {
+        $pages = Multionepage\Controller::getSubPages();
+        return Multionepage\Controller::getContent($pages);
+    }
 }
 
 /**

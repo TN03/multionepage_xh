@@ -4,6 +4,7 @@ $plugin_tx['multionepage']['menu_info']="Info";
 
 $plugin_tx['multionepage']['tab_title']="Multionepage";
 $plugin_tx['multionepage']['tab_class']="CSS class";
+$plugin_tx['multionepage']['tab_access']="Directaccess allowed";
 $plugin_tx['multionepage']['tab_save']="Save";
 
 $plugin_tx['multionepage']['alt_logo']="Yin and Yang";

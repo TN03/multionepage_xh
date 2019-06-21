@@ -28,6 +28,7 @@ class Controller {
         global $edit, $plugin_cf, $plugin_tx, $pd_router, $pth;
 
         $pd_router->add_interest('multionepage_class');
+        $pd_router->add_interest('multionepage_access');
         if ($plugin_cf['multionepage']['use_javascript']) {
             self::emitJavaScript();
         }
