@@ -131,6 +131,12 @@ Im Reiter "Multionepage" (oberhalb des Editors) kann optional eine
 zusätzliche CSS Klasse für die jeweilige Seite vergeben werden. Dies
 ermöglicht individuelles und robustes Seitendesign.
 
+Die direkte Verlinkung bzw. Ausgabe von Unterseiten wird durch
+Multionepage\_XH unterbunden. Um trotzdem Seiten > Level 1 einzeln anzuzeigen,
+gibt es im Reiter "Multionepage" eine Checkbox die die Ausgabe für
+die jeweilige Seite erlaubt. Die Ausnahme gilt auch eine versteckten Unterseite, 
+was für diverse Plugins und besondere Verlinkungen nützlich sein könnte.
+
 ## Beschränkungen
 
 Vermutlich werden nicht alle Plugins reibungslos unter "Onepage"
