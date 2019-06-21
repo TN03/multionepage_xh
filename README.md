@@ -69,7 +69,7 @@ Das Aussehen von Multionepage\_XH kann unter "Stylesheet" angepasst werden.
 normalen CMSimple\_XH Template-Tags durch Alternativen ersetzt sind, die
 Multionepage\_XH zur Verfügung stellt.
 
-#### `Multionepage_toc()`
+#### `multionepage_toc()`
 
 Dies ist ein **erforderlicher** Ersatz für `toc()`, der Links zu allen
 sichtbaren Seiten, bzw. Seiten-IDs der aktuellen "Onepage" anzeigt.
@@ -77,13 +77,13 @@ Um mehrere "Onepager" in einer Seite zu verlinken, muss das Template
 ein Navigationsmenü zu allen Level-1-Seiten enthalten, zum Beispiel
 `toc(1,1)`.
 
-#### `Multionepage_content()`
+#### `multionepage_content()`
 
 Dies ist ein **erforderlicher** Ersatz für `content()`, der den Inhalt einer
 Level-1-Seite inklusive den Inhalten aller sichtbaren Unterseiten 
 auf einer Seite anzeigt.
 
-#### `Multionepage_toplink()`
+#### `multionepage_toplink()`
 
 Dies ist ein **optionaler** Ersatz für `top()`, der konfigurierbares sanftes
 Scrollen anbietet, und nur angezeigt wird, wenn der Anwender bereits

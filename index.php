@@ -24,7 +24,7 @@ const MULTIONEPAGE_VERSION = '0.1';
 /**
  * @return array
  */
-function Multionepage_templates() {
+function multionepage_templates() {
     return array_merge(array(''), XH_templates());
 }
 
@@ -45,7 +45,7 @@ function Onepage_toc() {
 /**
  * @return string
  */
-function Multionepage_fulltoc() {
+function multionepage_fulltoc() {
     global $pth, $hc;
 
     if (!function_exists('XH_autoload')) {
@@ -58,7 +58,7 @@ function Multionepage_fulltoc() {
 /**
  * @return string
  */
-function Multionepage_toc() {
+function multionepage_toc() {
     global $pth;
 
     $pages = Multionepage\Controller::getSubPages();
@@ -83,7 +83,7 @@ function Onepage_content() {
 /**
  * @return mixed
  */
-function Multionepage_content() {
+function multionepage_content() {
     global $edit, $l, $u, $s, $sn, $pd_router;
 
     if ($s > -1 && $l[$s] > 1 && (!XH_ADM || (XH_ADM && !$edit))) {
@@ -109,7 +109,7 @@ function Multionepage_content() {
  * @param string $id
  * @return string
  */
-function Multionepage_toplink($id = '') {
+function multionepage_toplink($id = '') {
     return Multionepage\Controller::renderTopLink($id);
 }
 
