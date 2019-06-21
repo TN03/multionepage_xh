@@ -42,6 +42,30 @@ function Onepage_toc() {
     return $li->render($hc, 1);
 }
 */
+
+function multionepage_LiClickable($ta, $st) {
+    global $pth;
+    
+    if (!function_exists('XH_autoload')) {
+        include_once $pth['folder']['classes'] . 'Menu.php';
+    }
+    $t = new Multionepage\Liclick();
+    return $t->render($ta, $st);
+}
+
+/**
+ * @param bool
+ * @return string
+ */
+function multionepage_topleveltoc($cklickable = false) {
+    if ($cklickable) {
+        return str_replace('onepage_menu ', '', 
+                toc(1, 1, 'multionepage_LiClickable'));
+    } else {
+        return toc(1, 1);
+    }
+}
+
 /**
  * @return string
  */
