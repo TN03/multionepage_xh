@@ -75,16 +75,14 @@ class Li extends XH_Li
         $html = '<a href="' . $sn;
         if (XH_ADM && $edit) {
             $html .= '?' . $u[$i];
-        } else {
-            $path = explode($cf['uri']['seperator'], $u[$i]);
-            $html .= '?' . $path[0];
+        } else { $path = explode($cf['uri']['seperator'], $u[$i]);
+            $html .= '?' . $path[0]; }
             if ($plugin_cf['multionepage']['url_numeric']) {
                 $html .= '#' . $i;
             } else {
                 $url = Urlify::makeUniqueUrl($i);
                 $html .= '#' . $url;
             }
-        }
         $html .= $x . '">';
         return $html;
     }
