@@ -137,4 +137,8 @@ function multionepage_toplink($id = '') {
     return Multionepage\Controller::renderTopLink($id);
 }
 
+if (XH_ADM && $edit) {
+    $o .= Multionepage\Controller::renderPreviewLink();
+}
+
 Multionepage\Controller::dispatch();

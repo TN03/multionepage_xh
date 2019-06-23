@@ -205,6 +205,29 @@ class Controller {
             return '';
         }
     }
+    
+    /**
+     * @param int $pageindex
+     * @return mixed
+     */
+    public static function renderPreviewLink() {
+        global $s, $plugin_cf, $pth, $tx, $pd_router;
+
+        $pageData = $pd_router->find_page($s);
+        if ($plugin_cf['multionepage']['show_previewlink'] &&
+                !$pageData['multionepage_access']) {
+            return '<div class="multionepage_previewlink" '
+                    . 'style="visibility:hidden;">'
+                    . '<a title="' . $tx['editmenu']['normal'] . '" href="#">'
+                    . '<span class="fa fa-pencil-square-o"></span>'
+                    . '&nbsp;' . $tx['editmenu']['normal'] . '</a>'
+                    . '</div>' . PHP_EOL
+                    . '<script src="' . $pth["folder"]["plugins"] 
+                    . 'multionepage/multionepage_admin.js"></script>';
+        } else {
+            return '';
+        }
+    }
 
     /**
      * @param array $pages

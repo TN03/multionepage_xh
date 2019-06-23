@@ -125,6 +125,16 @@ im Ansichtsmodus einen Link zum direkten Editieren der aktuellen
 Seite ein. Die Position und das Aussehen des Links kann im Template
 mittels CSS angepasst werden.
 
+#### Preview-Link
+
+Wenn in der Konfiguration aktiviert, blendet das Plugin im Bearbeitungsmodus 
+einen Link ein, der direkt zur ensprechenden Position des aktuell
+bearbeiteten Inhaltes in der Voransicht springt. Der Link wird oberhalb des
+Editors eingeblendet und kann durch das Template mittels CSS angepasst werden.
+Bei Seiten, für die mttels PageData-Tab direkter Zugriff / direkte Anzeige
+aktiviert ist, wird kein Link angezeigt. In diesem Fall muss die Vorschau 
+über den entsprechenden Link im Adminmenü aktiviert werden.
+
 ### Page-Data Reiter
 
 Im Reiter "Multionepage" (oberhalb des Editors) kann optional eine
