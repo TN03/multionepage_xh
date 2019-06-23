@@ -46,31 +46,6 @@ jQuery(function ($) {
             $anchor.parent("li").removeClass("sdoc");
         }
     }
-    
-    function adjustPreviewLink() {
-        var $previewLink, url, $link, href;
-        
-        $previewLink = $('#xh_adminmenu a:first[href*="&normal"]');
-        if($previewLink.length) {
-            url = $previewLink.attr('href');
-            url = url.replace('&normal', '');
-            $link = $nav.find("a[href*=" + "'" +url + "'" + "]");
-            href = $link.attr('href');
-            href = (href.split('?').pop());
-            href = href.replace('#', '&normal#');
-            $('#xh_adminmenu a:first').attr('href', '?' + href);
-        }
-    }
-    
-    function adjustEditLink($url) {
-        var $editLink = $('#xh_adminmenu a:first[href*="&edit"]');
-        if ($editLink.length) {
-            $url = $url.split('?').pop();
-            $url = $url.split('#');
-            $('#xh_adminmenu a:first')
-                .attr('href', '?' + $url[0] + '&edit' + '#' + $url[1]);
-        }
-    }
 
     /*
     function initMenuClasses() {
@@ -126,7 +101,6 @@ jQuery(function ($) {
                 var $active = $nav.find("a[href$=" + "'#" +
                         $(this).attr('id') + "'" + "]");
                 toggleStatus($active, true);
-                //adjustEditLink($active.attr('href'));
             }
         });
     }
@@ -192,7 +166,6 @@ jQuery(function ($) {
         if (hash.length) {
             scrollToId(hash);
         }
-        //adjustPreviewLink();
         initMenuClasses();
         $("ul.onepage_menu a, a.scrollTo").click(function (e) {
             var hash = this.hash;
