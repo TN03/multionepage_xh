@@ -188,12 +188,9 @@ jQuery(function ($) {
     
     function init() {
         //Position berichtigen, wenn Seite mit Hash aufgerufen
-        //und customOffset > 0
-        if (customOffset > 0) {
-            var hash = window.location.hash;
-            if (hash.length) {
-                scrollToId(hash);
-            }
+        var hash = window.location.hash;
+        if (hash.length) {
+            scrollToId(hash);
         }
         //adjustPreviewLink();
         initMenuClasses();
