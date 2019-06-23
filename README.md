@@ -136,6 +136,10 @@ Multionepage\_XH unterbunden. Um trotzdem Seiten > Level 1 einzeln anzuzeigen,
 gibt es im Reiter "Multionepage" eine Checkbox die die Ausgabe für
 die jeweilige Seite erlaubt. Die Ausnahme gilt auch eine versteckten Unterseite, 
 was für diverse Plugins und besondere Verlinkungen nützlich sein könnte.
+**Wichtig:**
+da der direkte Zugriff auf Unterseiten unterbunden wird, ist 
+die Vorschau einer versteckten Unterseite auch nur möglich, wenn der direkte 
+Zugriff auf die Seite erlaubt wurde.
 
 ## Beschränkungen
 
