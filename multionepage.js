@@ -72,6 +72,7 @@ jQuery(function ($) {
         }
     }
 
+    /*
     function initMenuClasses() {
         var hash = window.location.hash;
         if (hash.length) {
@@ -86,7 +87,33 @@ jQuery(function ($) {
             toggleStatus($firstAnchor, true);
         }
     }
+    */
 
+    function initMenuClasses() {
+        var $active;
+        var hash = window.location.hash;
+        
+        if (hash.length) {
+            $nav.find("a").each(function () {
+                toggleStatus($(this), false);
+            });
+            $active = $nav.find("a[href$=" + "'" + hash + "'" + "]");
+            toggleStatus($active, true);
+        } else {
+            var url = $(location).attr('href');
+            if (url.indexOf('?') > 0 && url.indexOf('&edit') > 0) {
+                url = url.replace('&edit', '');
+                url = url.split('?').pop();
+                url = window.location.pathname + '?' + url + '#';
+                $active = $nav.find("a[href^=" + "'" + url + "'" + "]");
+                toggleStatus($active, true);
+            } else {
+                var $firstAnchor = $nav.find("a").first();
+                toggleStatus($firstAnchor, true);
+            }
+        }
+    }   
+    
     function updateMenuClasses() {
         var curPos = $(window).scrollTop();
         $sections.each(function () {
