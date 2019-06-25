@@ -14,6 +14,7 @@ sich in einer Site mehrere "Onepager" realisieren.
   - [Einstellungen](#einstellungen)
   - [Verwendung](#verwendung)
       - [Template](#template)
+      - [Seitenbearbeitung](#seitenbearbeitung)
       - [Page-Data Reiter](#page-data-reiter)
   - [Beschränkungen](#beschränkungen)
   - [Fehlerbehebung](#fehlerbehebung)
@@ -153,7 +154,7 @@ was für diverse Plugins und besondere Verlinkungen nützlich sein könnte.
 **Wichtig:**
 da der direkte Zugriff auf Unterseiten unterbunden wird, ist 
 die Vorschau einer versteckten Unterseite auch nur möglich, wenn der direkte 
-Zugriff auf diese Seite erlaubt wurde.
+Zugriff auf die Seite erlaubt wurde.
 
 #### Nicht verwendbare PageData-Einstellungen
 In Onepagern sind einzelne Optionen aus dem PageData-Tab "Seite", sowie der
