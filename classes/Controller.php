@@ -46,6 +46,7 @@ class Controller {
                     $plugin_tx['multionepage']['tab_title'],
                     "{$pth['folder']['plugins']}multionepage/multionepage_view.php"
             );
+            self::fixPagedataTabs();
             if (self::isAdministrationRequested()) {
                 self::handleAdministration();
             }
@@ -78,6 +79,25 @@ class Controller {
         include_jQuery();
         $bjs .= '<script>var MULTIONEPAGE = ' . json_encode($config) . ';</script>'
                 . '<script src="' . $file . '"></script>';
+    }
+    
+    protected static function fixPagedataTabs() {
+        global $bjs, $l, $plugin_cf, $plugin_tx, $pd_router, $pth, $s;
+
+        if ($plugin_cf['multionepage']['pagedata_hide_unused_fields']) {
+            $pd_router->add_tab(
+                $plugin_tx['multionepage']['tab_page_title'],
+                "{$pth['folder']['plugins']}multionepage/multionepage_page_view.php"
+            );
+            include_once($pth['folder']['plugins'] . 'jquery/jquery.inc.php');
+            include_jQuery();
+            $bjs .= '<script>jQuery("#xh_tab_Pageparams_view, '
+                    . '#xh_view_Pageparams_view").hide();</script>';
+            if ($s > -1 && $l[$s] != 1) {
+                $bjs .= '<script>jQuery("#xh_tab_Metatags_view, '
+                    . '#xh_view_Metatags_view").hide();</script>';
+            }
+        }
     }
 
     /**

@@ -9,3 +9,4 @@ $plugin_cf['multionepage']['toplink_scrollposition']="300";
 $plugin_cf['multionepage']['show_editlink']="true";
 $plugin_cf['multionepage']['show_previewlink']="true";
 $plugin_cf['multionepage']['inner_class']="onepage_page_inner";
+$plugin_cf['multionepage']['pagedata_hide_unused_fields']="true";

@@ -118,6 +118,8 @@ Multionepage\_XH die selben CSS-Klassen für die Naviagtionsmenues
 und die selbe Struktur für die ausgegebenen Inhalte, wie das Originale
 [Onepage\_XH-Plugin](https://github.com/cmb69/onepage_xh).
 
+### Seitenbearbeitung
+
 #### Edit-Link
 
 Wenn in der Konfiguration aktiviert, blendet das Plugin dem Administrator
@@ -137,19 +139,29 @@ aktiviert ist, wird kein Link angezeigt. In diesem Fall muss die Vorschau
 
 ### Page-Data Reiter
 
+#### CSS-Klasse
 Im Reiter "Multionepage" (oberhalb des Editors) kann optional eine
 zusätzliche CSS Klasse für die jeweilige Seite vergeben werden. Dies
 ermöglicht individuelles und robustes Seitendesign.
 
+#### Direktzugriff auf Einzelseiten erlauben
 Die direkte Verlinkung bzw. Ausgabe von Unterseiten wird durch
-Multionepage\_XH unterbunden. Um trotzdem Seiten > Level 1 einzeln anzuzeigen,
-gibt es im Reiter "Multionepage" eine Checkbox die die Ausgabe für
-die jeweilige Seite erlaubt. Die Ausnahme gilt auch eine versteckten Unterseite, 
+Multionepage\_XH unterbunden. Um trotzdem Seiten > Level 1 einzeln 
+anzuzeigen, gibt es im Reiter "Multionepage" eine Checkbox die die Ausgabe für
+die jeweilige Seite erlaubt. Die Ausnahme gilt auch für versteckte Unterseiten, 
 was für diverse Plugins und besondere Verlinkungen nützlich sein könnte.
 **Wichtig:**
 da der direkte Zugriff auf Unterseiten unterbunden wird, ist 
 die Vorschau einer versteckten Unterseite auch nur möglich, wenn der direkte 
-Zugriff auf die Seite erlaubt wurde.
+Zugriff auf diese Seite erlaubt wurde.
+
+#### Nicht verwendbare PageData-Einstellungen
+In Onepagern sind einzelne Optionen aus dem PageData-Tab "Seite", sowie der
+Tab "Meta" nicht sinnvoll verwendbar. Multionepage_XH kann diese Tabs
+ausblenden, wenn das Feature über die Plugin-Konfiguration aktiviert wird.
+Der Tab "Meta" wird dann nur auf Level-1 Seiten eingeblendet, wo die dort 
+hinterlegten Einstellungen dann für den jeweiligen "Onepager" insgesamt gelten. 
+Der Tab "Seite" wird komplett deaktiviert und durch den Tab "Seite (MOP)" ersetzt.
 
 ## Beschränkungen
 
@@ -194,7 +206,7 @@ Vielen Dank an die Community im [CMSimple\_XH
 forum](http://www.cmsimpleforum.com/) für Hinweise, Anregungen und das
 Testen. Besonderer Dank gebührt *frase* und *lck* für lange und fruchtbare 
 Diskussionen und reichlich Vorschlägen rund um "Onepager" und natürlich 
-*cmb69*, dessen Onepage_XH.- Plugin als Vorlage diente.
+*cmb69*, dessen Onepage_XH- Plugin als Vorlage diente.
 
 Und zu guter letzt vielen Dank an [Peter Harteg](http://www.harteg.dk/),
 den "Vater" von CMSimple, und allen Entwicklern von

@@ -6,6 +6,7 @@ $plugin_tx['multionepage']['tab_title']="Multionepage";
 $plugin_tx['multionepage']['tab_class']="CSS class";
 $plugin_tx['multionepage']['tab_access']="Directaccess allowed";
 $plugin_tx['multionepage']['tab_save']="Save";
+$plugin_tx['multionepage']['tab_page_title']="Page (MOP)";
 
 $plugin_tx['multionepage']['alt_logo']="Yin and Yang";
 $plugin_tx['multionepage']['alt_toplink']="Scroll to top";
