@@ -1,3 +1,4 @@
+
 # Multionepage\_XH
 
 Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
@@ -14,6 +15,7 @@ sich in einer Site mehrere "Onepager" realisieren.
   - [Einstellungen](#einstellungen)
   - [Verwendung](#verwendung)
       - [Template](#template)
+      - [Javascript](#javascript)
       - [Seitenbearbeitung](#seitenbearbeitung)
       - [Page-Data Reiter](#page-data-reiter)
   - [Beschränkungen](#beschränkungen)
@@ -119,6 +121,35 @@ Multionepage\_XH die selben CSS-Klassen für die Naviagtionsmenues
 und die selbe Struktur für die ausgegebenen Inhalte, wie das Originale
 [Onepage\_XH-Plugin](https://github.com/cmb69/onepage_xh).
 
+### Javascript
+
+Multionepage_XH nutzt jQuery für Browserscripting. Empfohlen ist eine aktuelle
+jQuery-Version > 3. Der Code befindet sich in der Datei */plugins/multionepage/multionepage.js*.
+Sofern in der Konfiguration aktiviert, wird die Datei automatisch geladen und stellt 
+zum Beispiel Funktionen für "smooth scrolling", Hervorhebung des aktuellen 
+Menüpunktes im Onepage-Menü, aktualisieren der Browser-Historie usw. bereit.
+Im Template kann eine alternative Javascriptdatei bereit gestellt werden. Befindet sich
+im Template-Ordner eine Datei *multionepage.js* bzw. *multionepage.min.js*, wird diese Datei
+vom Plugin automatisch geladen.
+
+Zur Konfiguration einzelner Javascript-Funktionen stehen folgende Optionen zur Verfügung,
+die in der *template.htm* konfiguriert werden können:
+
+#### Benutzerdefiniertes Scroll-Offset
+
+Beim Scrollen zu IDs / Ankern per Onepage-Menü, kann, z.B. bei fixierten Seiten-Headern 
+ein Offset definiert werden, damit das Scroll-Ziel unter die fixierten Elemente verschoben wird:
+Beispiel: `<script>onepage_customOffset = 80</script>`
+
+#### Offset bei der Markierung des aktiven Links im Menü
+
+Beim Scrollen der Seite wird je nach aktuell angezeigter Seiten-ID der passende Menüpunkt 
+in der Navigation markiert. Hierzu werden die bekannten Menüklassen `.sdoc / . sdocs` 
+dynamisch angepasst. Zusätzlich bekommt der aktive Link die Klasse .onepage_current zugewiesen.
+Ein Offset zur Beeinflussung der Scrollposition, ab der der jeweilige Menüpunkt als aktiv markiert 
+wird, kann über eine Variable  gesetzt werden: 
+Beispiel: `<script>onepage_navSpyOffset = 30</script>`
+
 ### Seitenbearbeitung
 
 #### Edit-Link
@@ -137,6 +168,11 @@ Editors eingeblendet und kann durch das Template mittels CSS angepasst werden.
 Bei Seiten, für die mttels PageData-Tab direkter Zugriff / direkte Anzeige
 aktiviert ist, wird kein Link angezeigt. In diesem Fall muss die Vorschau 
 über den entsprechenden Link im Adminmenü aktiviert werden.
+
+#### Smooth-Scroll für interne Links
+Wird einem Link zu einem internen Anker, bzw. einer gültigen Seiten-ID, 
+die Klasse `scrollTo` zugewiesen, wird der Browser "weich" zum Linkziel skrollen, 
+sofern "Javascript laden" in der Konfiguration von Multionepage_XH ausgewählt ist.
 
 ### Page-Data Reiter
 
