@@ -108,11 +108,12 @@ function Onepage_content() {
  * @return mixed
  */
 function multionepage_content() {
-    global $edit, $l, $u, $s, $sn, $pd_router;
+    global $bjs, $edit, $l, $u, $s, $sn, $pd_router;
 
     if ($s > -1 && $l[$s] > 1 && (!XH_ADM || (XH_ADM && !$edit))) {
         $pageData = $pd_router->find_page($s);
         if ($pageData['multionepage_access']) {
+            $bjs .= '<script>jQuery(".onepage_menu").hide();</script>';
             return Multionepage\Controller::getContent(array($s));
         }
         $t = Multionepage\Controller::getRoot($s);
