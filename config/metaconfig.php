@@ -1,5 +1,6 @@
 <?php
 
+$plugin_mcf['multionepage']['mode']="enum:Multionepage,Onepage";
 $plugin_mcf['multionepage']['admin_template']="function:Multionepage_templates";
 $plugin_mcf['multionepage']['url_numeric']="bool";
 $plugin_mcf['multionepage']['use_javascript']="bool";

@@ -11,6 +11,7 @@ $plugin_tx['multionepage']['tab_page_title']="Page (MOP)";
 $plugin_tx['multionepage']['alt_logo']="Yin and Yang";
 $plugin_tx['multionepage']['alt_toplink']="Scroll to top";
 
+$plugin_tx['multionepage']['cf_mode']="For further usage.";
 $plugin_tx['multionepage']['cf_admin_template']="The template for the edit mode. Leave empty to use the normal template.";
 $plugin_tx['multionepage']['cf_url_numeric']="Whether to use numeric URLs for the page sections.";
 $plugin_tx['multionepage']['cf_use_javascript']="Whether to use the shipped JavaScript or not.";
