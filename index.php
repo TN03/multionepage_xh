@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Onepage_XH.  If not, see <http://www.gnu.org/licenses/>.
  */
-const MULTIONEPAGE_VERSION = '0.1';
+const MULTIONEPAGE_VERSION = '1.0beta1';
 
 /**
  * @return array
