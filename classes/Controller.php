@@ -89,8 +89,6 @@ class Controller {
                 $plugin_tx['multionepage']['tab_page_title'],
                 "{$pth['folder']['plugins']}multionepage/multionepage_page_view.php"
             );
-            include_once($pth['folder']['plugins'] . 'jquery/jquery.inc.php');
-            include_jQuery();
             $bjs .= '<script>jQuery("#xh_tab_Pageparams_view, '
                     . '#xh_view_Pageparams_view").hide();</script>';
             if ($s > -1 && $l[$s] != 1) {
