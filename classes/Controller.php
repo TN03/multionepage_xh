@@ -329,5 +329,24 @@ class Controller {
                 . tag('img src="' . $image . '" alt="' . $alt . '"')
                 . '</a>';
     }
+    
+    /**
+     * @return void
+     */
+    public static function renderSitemap() {
+        global $cl, $tx, $o, $pd_router, $title;
+
+        $title = $tx['title']['sitemap'];
+        $pages = array();
+        $o .= '<h1>' . $title . '</h1>' . "\n";
+        for ($i = 0; $i < $cl; $i++) {
+            $pageData = $pd_router->find_page($i);
+            if (XH_ADM || (!hide($i) && $pageData['linked_to_menu'])) {
+                $pages[] = $i;
+            }
+        }
+        $t = new Sitemapli();
+        $o .= $t->render($pages, 'sitemaplevel');
+    }
 
 }

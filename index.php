@@ -138,6 +138,12 @@ function multionepage_toplink($id = '') {
     return Multionepage\Controller::renderTopLink($id);
 }
 
+//handle Sitemap
+if ($f == 'sitemap') {
+    Multionepage\Controller::renderSitemap();
+    $f = 'multionepage_sitemap';
+}
+
 if (XH_ADM && $edit) {
     $o .= Multionepage\Controller::renderPreviewLink();
 }
