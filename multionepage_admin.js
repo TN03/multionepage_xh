@@ -13,7 +13,7 @@ jQuery(function ($) {
         var $nav = $("ul.onepage_menu");
 
         url = $(location).attr('href');
-        if (url.indexOf('?') > 0) {
+        if (url.indexOf('?') > 0 && url.indexOf('?&') === -1 ) {
             url = url.replace('&edit', '');
             url = url.split('?').pop();
             $link = $nav.find("a[href*=" + "'" + url + "'" + "]");
