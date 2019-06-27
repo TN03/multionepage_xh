@@ -90,10 +90,12 @@ class Controller {
                 "{$pth['folder']['plugins']}multionepage/multionepage_page_view.php"
             );
             $bjs .= '<script>jQuery("#xh_tab_Pageparams_view, '
-                    . '#xh_view_Pageparams_view").hide();</script>';
+                    . '#xh_view_Pageparams_view")'
+                    . '.css("cssText", "display: none !important;");</script>';
             if ($s > -1 && $l[$s] != 1) {
                 $bjs .= '<script>jQuery("#xh_tab_Metatags_view, '
-                    . '#xh_view_Metatags_view").hide();</script>';
+                    . '#xh_view_Metatags_view")'
+                    . '.css("cssText", "display: none !important;");</script>';
             }
         }
     }
