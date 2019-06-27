@@ -168,14 +168,19 @@ jQuery(function ($) {
         }
         initMenuClasses();
         $("ul.onepage_menu a, a.scrollTo").click(function (e) {
-            var hash = this.hash;
+            hash = this.hash;
             if (hash.length > 0 && MULTIONEPAGE.isOnepage) {
                 scrollToId(hash);
                 e.preventDefault();
             }
         });
-        $("#onepage_toplink").click(function (e) {
-            scrollToId("#");
+        $("a#onepage_toplink").click(function (e) {
+            hash = this.hash;
+            if (hash.length) {
+                scrollToId(hash);
+            } else {
+                scrollToId("#");
+            }
             e.preventDefault();
         });
         $(window).scroll(function () {
