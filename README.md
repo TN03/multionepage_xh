@@ -1,4 +1,5 @@
 
+
 # Multionepage\_XH
 
 Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
@@ -26,7 +27,9 @@ sich in einer Site mehrere "Onepager" realisieren.
 ## Voraussetzungen
 
 Multionepage\_XH ist ein Plugin für CMSimple\_XH. Es benötigt CMSimple\_XH ≥
-1.6.3 und PHP ≥ 5.3.0 mit der *JSON* Extension.
+1.6.3 und PHP ≥ 5.4.0 mit der *JSON* Extension. 
+Für volle Funktionsfähigkeit wird das Plugin Fa_XH benötigt, welches in 
+CMSimple\_XH ab Version 1.7 enthalten ist, oder von [GitHub](https://github.com/cmb69/fa_xh/releases) geladen werden kann. 
 
 ## Download
 

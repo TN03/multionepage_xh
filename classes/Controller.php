@@ -22,6 +22,8 @@
 
 namespace Multionepage;
 
+use Fa;
+
 class Controller {
 
     public static function dispatch() {
@@ -38,6 +40,9 @@ class Controller {
                 if ($template != '') {
                     self::setTemplate($template);
                 }
+            }
+            if (class_exists('Fa\\RequireCommand')) {
+                (new Fa\RequireCommand)->execute();
             }
             if (function_exists('XH_registerStandardPluginMenuItems')) {
                 XH_registerStandardPluginMenuItems(false);
@@ -219,7 +224,9 @@ class Controller {
             return '<div class="multionepage_editlink">'
                     . '<a title="' . $tx['editmenu']['edit'] . '" '
                     . 'href="' . $sn . '?' . $u[$pageindex] . '&amp;edit">'
-                    . '<span class="fa fa-pencil-square-o"></span></a>'
+                    . '<span class="fa fa-pencil-square-o"></span>'
+                    . '<span class="multionepage_editlink_text">&nbsp;'
+                    . $tx['editmenu']['edit'] . '</span></a>'
                     . '</div>' . PHP_EOL;
         } else {
             return '';
@@ -239,8 +246,9 @@ class Controller {
             return '<div class="multionepage_previewlink" '
                     . 'style="visibility:hidden;">'
                     . '<a title="' . $tx['editmenu']['normal'] . '" href="#">'
-                    . '<span class="fa fa-pencil-square-o"></span>'
-                    . '&nbsp;' . $tx['editmenu']['normal'] . '</a>'
+                    . '<span class="fa fa-eye"></span>'
+                    . '<span class="multionepage_previewlink_text">&nbsp;'
+                    . $tx['editmenu']['normal'] . '</span></a>'
                     . '</div>' . PHP_EOL
                     . '<script src="' . $pth["folder"]["plugins"] 
                     . 'multionepage/multionepage_admin.js"></script>';
