@@ -1,6 +1,7 @@
 
 
 
+
 # Multionepage\_XH
 
 Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
@@ -120,7 +121,8 @@ Mehrere Template-Tags werden für "Onepage" Templates nicht unterstützt:
 
 \* `sitemaplink()` wird ab v1.0beta2 unterstützt. Die Links in der Sitemap verweisen direkt an die entsprechende Seiten-Id im jeweiligen Onepager. Die Konfigurationseinstellung 
 "*Versteckte Seiten anzeigen → Inhaltsverzeichnis"*  
-wird nicht unterstützt, da diese Seiten nicht in einem Onepager angezeigt werden und daher keine sinnvolle Verlinkung möglich ist.
+wird nicht unterstützt, da diese Seiten nicht in einem Onepager angezeigt werden und daher keine 
+sinnvolle Verlinkung möglich ist.
 
 #### Menue- und Inhaltsstruktur
 
@@ -190,15 +192,17 @@ zusätzliche CSS Klasse für die jeweilige Seite vergeben werden. Dies
 ermöglicht individuelles und robustes Seitendesign.
 
 #### Direktzugriff auf Einzelseiten erlauben
-Die direkte Verlinkung bzw. Ausgabe von Unterseiten wird durch
-Multionepage\_XH unterbunden. Um trotzdem Seiten > Level 1 einzeln 
-anzuzeigen, gibt es im Reiter "Multionepage" eine Checkbox die die Ausgabe für
+Die direkte Verlinkung bzw. Ausgabe von Unterseiten wird durch Multionepage\_XH 
+unterbunden. Um trotzdem Seiten > Level 1 als eigenständige Einzelseiten  
+anzuzeigen, gibt es im Reiter "Multionepage" eine Checkbox, welche die Ausgabe für
 die jeweilige Seite erlaubt. Die Ausnahme gilt auch für versteckte Unterseiten, 
 was für diverse Plugins und besondere Verlinkungen nützlich sein könnte.
 **Wichtig:**
-da der direkte Zugriff auf Unterseiten unterbunden wird, ist 
-die Vorschau einer versteckten Unterseite auch nur möglich, wenn der direkte 
-Zugriff auf die Seite erlaubt wurde.
+da der direkte Zugriff auf Unterseiten unterbunden wird, ist die Vorschau einer versteckten 
+Unterseite auch nur möglich, wenn der direkte Zugriff auf die Seite erlaubt wurde. 
+Bei versteckten Seiten wird kein Vorschau-Link über dem Editor angezeigt. Hier muss der 
+entsprechende Button im Admin-Menü verwendet werden.
+Weiterhin wird das interne Seitenmenü (.multionepage_menu) in der Vorschau ausgeblendet.
 
 #### Nicht verwendbare PageData-Einstellungen
 In Onepagern sind einzelne Optionen aus dem PageData-Tab "Seite", sowie der
