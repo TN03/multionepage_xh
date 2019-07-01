@@ -1,5 +1,6 @@
 
 
+
 # Multionepage\_XH
 
 Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
@@ -115,7 +116,11 @@ Link ganz oben auf die Seite.
 
 Mehrere Template-Tags werden für "Onepage" Templates nicht unterstützt:
 `content()`, `li()`, `locator()`, `mailformlink()`, `nextpage()`, `previouspage()`,
-`printlink()`, `searchbox()`, `sitemaplink()`, `submenu()`, `toc()`.
+`printlink()`, `searchbox()`, ~~`sitemaplink()`~~\*, `submenu()`, `toc()`.
+
+\* `sitemaplink()` wird ab v1.0beta2 unterstützt. Die Links in der Sitemap verweisen direkt an die entsprechende Seiten-Id im jeweiligen Onepager. DIe Konfigurationseinstellung 
+"*Versteckte Seiten anzeigen → Inhaltsverzeichnis"*  
+wird nicht unterstützt, da diese Seiten nicht in einem Onepager angezeigt werden und daher keine sinnvolle Verlinkung möglich ist.
 
 #### Menue- und Inhaltsstruktur
 
