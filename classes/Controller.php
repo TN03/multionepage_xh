@@ -323,13 +323,15 @@ class Controller {
      * @return string
      */
     public static function renderTopLink($id) {
-        global $pth, $plugin_tx;
+        global $plugin_cf, $pth, $plugin_tx;
 
         if ($id != '' && $id[0] == '#') {
             $id = substr($id, 1);
         }
-        $image = $pth['folder']['templateimages'] . 'up.png';
-        if (!file_exists($image)) {
+        $image = $pth['folder']['templateimages'] 
+                . $plugin_cf['multionepage']['toplink_image'];
+        if (!file_exists($image) 
+                || $plugin_cf['multionepage']['toplink_image'] == '') {
             $image = $pth['folder']['plugins'] . 'multionepage/images/up.png';
         }
         $alt = $plugin_tx['multionepage']['alt_toplink'];
