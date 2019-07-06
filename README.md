@@ -2,6 +2,7 @@
 
 
 
+
 # Multionepage\_XH
 
 Multionepage\_XH bietet Werkzeuge um so genannte "Onepage" Websites zu
@@ -105,13 +106,22 @@ Dies ist ein **optionaler** Ersatz für `top()`, der konfigurierbares sanftes
 Scrollen anbietet, und nur angezeigt wird, wenn der Anwender bereits
 etwas nach unten gescrollt hat. Ohne JavaScript-Unterstützung wird der
 Link immer angezeigt, und statt des sanften Scrollens wird gesprungen.
-Das Bild des Links kann geändert werden, indem Sie eine Bilddatei mit
-dem Namen up.png im images/ Ordner des Templates ablegen.
+~~Das Bild des Links kann geändert werden, indem Sie eine Bilddatei mit
+dem Namen up.png im images/ Ordner des Templates ablegen.~~
 
-Dieses Template-Tag akzeptiert einen optionalen Parameter, die ID eines
-Elements. Auf diese Weise können Sie den Anfang der Seite individuell
-definieren. Wenn Sie der Funktion kein Argument übergeben, verweist der
-Link ganz oben auf die Seite.
+Dieses Template-Tag akzeptiert zwei optionale Parameter, die ID eines
+Elements und den Namen einer Bilddatei für den Link.
+Durch die Angabe einer ID können Sie den Anfang der Seite, genauer gesagt das
+Skroll-Ziel des Top-Links, individuell bestimmen: `multionepage_toplink('meineID')`.
+Wenn Sie der Funktion keine ID übergeben, verweist der Link ganz oben auf die Seite.
+
+Der zweite Parameter legt den Bildnamen fest, der für die Anzeige des Top-Links
+verwendet wird. Die Bilddatei muss im  Ordner /templates/templatename/images/
+gespeichert sein: `multionepage_toplink('meineID', 'bildname.svg')`.
+**Wichtig:** wenn der Funktion ein Bildname übergeben wird, darf der erste Parameter
+(ID) nicht leer sein. Um nur das Bild zu übergeben, die Id aber nicht zu ändern, geben Sie
+der als ersten Parameter einfach eine leere Zeichenkette an: 
+`multionepage_toplink('', 'bildname.svg')`.
 
 #### Nicht unterstützte Template-Tags
 
@@ -119,10 +129,11 @@ Mehrere Template-Tags werden für "Onepage" Templates nicht unterstützt:
 `content()`, `li()`, `locator()`, `mailformlink()`, `nextpage()`, `previouspage()`,
 `printlink()`, `searchbox()`, ~~`sitemaplink()`~~\*, `submenu()`, `toc()`.
 
-\* `sitemaplink()` wird ab v1.0beta2 unterstützt. Die Links in der Sitemap verweisen direkt an die entsprechende Seiten-Id im jeweiligen Onepager. Die Konfigurationseinstellung 
+\* `sitemaplink()` wird ab v1.0beta2 unterstützt. Die Links in der Sitemap verweisen direkt an 
+die entsprechende Seiten-Id im jeweiligen Onepager. Die Konfigurationseinstellung 
 "*Versteckte Seiten anzeigen → Inhaltsverzeichnis"*  
-wird nicht unterstützt, da diese Seiten nicht in einem Onepager angezeigt werden und daher keine 
-sinnvolle Verlinkung möglich ist.
+wird nicht unterstützt, da diese Seiten nicht in einem Onepager angezeigt werden und daher 
+keine sinnvolle Verlinkung möglich ist.
 
 #### Menue- und Inhaltsstruktur
 

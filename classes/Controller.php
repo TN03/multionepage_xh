@@ -320,18 +320,17 @@ class Controller {
 
     /**
      * @param string $id
+     * @param string $imgfile
      * @return string
      */
-    public static function renderTopLink($id) {
-        global $plugin_cf, $pth, $plugin_tx;
+    public static function renderTopLink($id, $imgfile) {
+        global $pth, $plugin_tx;
 
         if ($id != '' && $id[0] == '#') {
             $id = substr($id, 1);
         }
-        $image = $pth['folder']['templateimages'] 
-                . $plugin_cf['multionepage']['toplink_image'];
-        if (!file_exists($image) 
-                || $plugin_cf['multionepage']['toplink_image'] == '') {
+        $image = $pth['folder']['templateimages'] . $imgfile;
+        if (!file_exists($image) || $imgfile == '') {
             $image = $pth['folder']['plugins'] . 'multionepage/images/up.png';
         }
         $alt = $plugin_tx['multionepage']['alt_toplink'];

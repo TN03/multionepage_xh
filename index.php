@@ -134,8 +134,8 @@ function multionepage_content() {
  * @param string $id
  * @return string
  */
-function multionepage_toplink($id = '') {
-    return Multionepage\Controller::renderTopLink($id);
+function multionepage_toplink($id = '', $imgfile = '') {
+    return Multionepage\Controller::renderTopLink($id, $imgfile);
 }
 
 //handle Sitemap
