@@ -31,7 +31,8 @@ function Multionepage_view($pageData)
 <form id="multionepage" action="$action" method="post">
     <p>
         <b>{$plugin_tx['multionepage']['tab_title']}</b>
-    <p>
+   </p>
+   <p>
         <label>
             <span>{$plugin_tx['multionepage']['tab_class']}</span>
             <input type="text" name="multionepage_class" value="$class">
