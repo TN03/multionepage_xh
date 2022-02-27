@@ -245,7 +245,7 @@ class Controller {
 
         $pageData = $pd_router->find_page($s);
         if ($plugin_cf['multionepage']['show_previewlink'] &&
-                !$pageData['multionepage_access']) {
+                empty($pageData['multionepage_access'])) {
             return '<div class="multionepage_previewlink" '
                     . 'style="visibility:hidden;">'
                     . '<a title="' . $tx['editmenu']['normal'] . '" href="#">'
