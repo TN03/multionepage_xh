@@ -55,6 +55,9 @@ class Controller {
             if (self::isAdministrationRequested()) {
                 self::handleAdministration();
             }
+            if (!$edit) {
+                XH_afterPluginLoading(array('Multionepage\\Controller', 'evaluateScripting'));
+            }
         } else {
             XH_afterPluginLoading(array('Multionepage\\Controller', 'evaluateScripting'));
         }
